@@ -29,6 +29,18 @@ export default {
   components: {
     Logo
   },
+  head () {
+    return {
+      title: 'Home Page',
+      meta: [
+        {name: 'twitter:title', content: 'Nuxt is awesome'},
+        {name: 'twitter:description', content: 'Vue + Nuxt = awesomeness'},
+        {name: 'twitter:image', content: 'https://s3.amazonaws.com/uifaces/faces/twitter/jeremymouton/128.jpg'},
+        {name: 'twitter:card', content: 'summary_large_image'},
+      ]
+    }
+
+  },
   computed: {
     posts () {
       return this.$store.state.posts.all
